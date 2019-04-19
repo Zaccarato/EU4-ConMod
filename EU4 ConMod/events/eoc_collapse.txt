@@ -1,0 +1,191 @@
+country_event = {
+	id = collapse.1
+	title = "collapse.1.title"
+	desc = "collapse.1.desc"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = collapse.1.OPTA
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 3
+			}
+		}
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}			
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = collapse.2
+	title = "collapse.2.title"
+	desc = "collapse.2.desc"
+	picture = GREAT_BUILDING_eventPicture
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		add_mandate = 50
+	}
+}
+
+country_event = {
+	id = collapse.3
+	title = "collapse.3.title"
+	desc = "collapse.3.desc"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = collapse.3.OPTA
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}			
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}			
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}			
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 1
+			}
+		}
+		random_core_province = {
+			limit = {
+				owned_by = ROOT
+			}			
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = collapse.4
+	title = "collapse.4.title"
+	desc = "collapse.4.desc"
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = collapse.4.OPTA
+		random_core_province = {
+			limit = {
+				can_spawn_rebels = nationalist_rebels
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 2
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 2
+			}
+		}
+		random_core_province = {
+			limit = {
+				can_spawn_rebels = nationalist_rebels
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 2
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 2
+			}
+		}
+	}
+}
+	
+country_event = {
+	id = collapse.101
+	title = "collapse.101.title"
+	desc = "collapse.101.desc"
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {
+		is_emperor_of_china = yes
+		NOT = { imperial_mandate = 50 }
+		calc_true_if = {
+			china_superregion = {
+				NOT = { owned_by = ROOT }
+			}
+			amount = 40
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		dismantle_empire_of_china = yes
+		add_country_modifier = {
+			name = lost_mandate_of_heaven
+			duration = 7300
+		}
+	}

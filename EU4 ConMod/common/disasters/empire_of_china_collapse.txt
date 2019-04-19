@@ -1,0 +1,64 @@
+empire_of_china_collapse = {
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		is_emperor_of_china = yes
+	}
+	
+	can_start = {
+		has_any_disaster = no
+		is_subject = no
+		NOT = { imperial_mandate = 50 }
+	}
+	
+	can_stop = { 
+		imperial_mandate = 60
+		has_any_disaster = yes
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { imperial_mandate = 50 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { imperial_mandate = 40 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { imperial_mandate = 30 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { imperial_mandate = 20 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { imperial_mandate = 10 }
+		}
+	}
+	
+	can_end = {
+		OR = {
+			is_emperor_of_china = no
+			imperial_mandate = 75
+		}
+	}
+	
+	modifier = {
+		imperial_mandate = -0.3
+		global_unrest = 12
+		stability_cost_modifier = 0.5
+	}
+	
+	on_start = collapse.1
+	on_end = collapse.2
+	
+	on_monthly = {
+        random_events = { 
+                1000 = 0
+                200 = collapse.3
+                100 = collapse.4	
+        }
+	}
+}
