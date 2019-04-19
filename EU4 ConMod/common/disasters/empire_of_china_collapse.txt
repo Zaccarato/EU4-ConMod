@@ -39,10 +39,7 @@ empire_of_china_collapse = {
 	}
 	
 	can_end = {
-		OR = {
-			is_emperor_of_china = no
-			imperial_mandate = 75
-		}
+		is_emperor_of_china = no
 	}
 	
 	modifier = {

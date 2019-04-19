@@ -10,6 +10,11 @@ country_event = {
 	
 	option = {
 		name = collapse.1.OPTA
+		add_country_modifier = {
+			name = chinese_collapse
+			duration = -1
+			hidden = yes
+		}
 		random_core_province = {
 			limit = {
 				owned_by = ROOT
@@ -62,14 +67,28 @@ country_event = {
 	id = collapse.2
 	title = "collapse.2.title"
 	desc = "collapse.2.desc"
-	picture = GREAT_BUILDING_eventPicture
 
-	major = yes
+	hidden = yes
 	
 	is_triggered_only = yes
 	
 	option = {
-		add_mandate = 50
+		if = {
+			limit = {
+				has_country_modifier = chinese_collapse
+			}
+			country_event = {
+				id = collapse.101
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_modifier = chinese_collapse }
+			}
+			country_event = {
+				id = collapse.102
+			}
+		}
 	}
 }
 
@@ -167,23 +186,30 @@ country_event = {
 	desc = "collapse.101.desc"
 	picture = CIVIL_WAR_eventPicture
 	
-	trigger = {
-		is_emperor_of_china = yes
-		NOT = { imperial_mandate = 50 }
-		calc_true_if = {
-			china_superregion = {
-				NOT = { owned_by = ROOT }
-			}
-			amount = 40
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		dismantle_empire_of_china = yes
+		release = JIN
+		release = QIN
+		release = QIC
+		release = YAN
+		release = CSH
+		release = CXI
+		release = CHC
+		release = LNG
+		release = TNG
+		release = WUU
+		release = NNG
+		release = MIN
+		release = HUA
+		release = CYI
+		release = CMI
+		release = YUE
+		release = MNG
+		every_subject_country = {
+			grant_independence = yes
+		}
 		add_country_modifier = {
 			name = lost_mandate_of_heaven
 			duration = 7300
