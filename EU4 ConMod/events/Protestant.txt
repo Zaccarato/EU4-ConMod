@@ -142,9 +142,9 @@ country_event = {
 
 #Scandanavian Reformation
 country_event = {
-	id = 2002
-	title = "EVTNAME2002"
-	desc = "EVTNAME2002"
+	id = prot.1
+	title = "prot.1.t"
+	desc = "prot.1.d"
 	picture = RELIGION_eventPicture
 	
 	major = yes
