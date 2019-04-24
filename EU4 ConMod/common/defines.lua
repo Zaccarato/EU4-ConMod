@@ -447,7 +447,7 @@ NCountry = {
 	ALLOW_ESTATE_IN_CAPITAL = 0,					 -- Whether or not the capital can be assigned to an estate
 
 	NOMAD_DEVELOPMENT_SCALE = 600,
-	OVERSEAS_CLIENT_STATES = 0,					-- Allow overseas client states?
+	OVERSEAS_CLIENT_STATES = 1,					-- Allow overseas client states?
 
 	ESTATE_ANGRY_THRESHOLD = 40,
 	ESTATE_HAPPY_THRESHOLD = 60,
