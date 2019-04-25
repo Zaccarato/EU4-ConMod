@@ -10541,3 +10541,6 @@ recently_rooted_heresy = {
 protestantism_discredited = {
 	religious_conversion_resistance = 0.2
 }
+
+tolerating_prot = {
+}
